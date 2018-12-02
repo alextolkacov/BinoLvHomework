@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
 public class IngredientPage {
@@ -18,7 +19,10 @@ public class IngredientPage {
         Assert.assertTrue("There is no header", baseFunc.isElementPresent(HEADER));
     }
 
-    public void checkForSelectedRecipeName(String name) {
+    public void checkForSelectedRecipeName(String name, List<String> links) {
+        for (int id = 0; id < links.size(); id++){
+            baseFunc.driver.get(links.get(id));
+        }
         List<WebElement> recipes = baseFunc.getElements(SELECTED_RECIPE);
         boolean isRecipeFound = false;
         for (int i = 0; i < recipes.size(); i++) {

@@ -29,9 +29,10 @@ public class RecipePage {
         return new IngredientPage(baseFunc);
     }
 
-    public void checkIngredients() {
+    public List<String> checkIngredients() {
         List<WebElement> ingredients = baseFunc.getElements(INREDIENTS);
         List<String> links = new ArrayList<String>();
         for (int i = 0; i < ingredients.size(); i++) links.add(ingredients.get(i).getAttribute("href"));
+        return links;
     }
 }

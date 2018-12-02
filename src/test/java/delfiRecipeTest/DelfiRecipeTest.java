@@ -32,6 +32,6 @@ public class DelfiRecipeTest {
         IngredientPage ingredientPage = recipePage.clickOnIngredient(0);
 
         LOGGER.info("Checking for selected recipe name");
-        ingredientPage.checkForSelectedRecipeName(recipePage.getRecipeText());
+        ingredientPage.checkForSelectedRecipeName(recipePage.getRecipeText(), recipePage.checkIngredients());
     }
 }
