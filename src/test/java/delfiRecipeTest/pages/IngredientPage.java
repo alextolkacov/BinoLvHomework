@@ -1,10 +1,9 @@
-package delfiRecipeTest.Pages;
+package delfiRecipeTest.pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.lang.reflect.Method;
 import java.util.List;
 
 public class IngredientPage {
